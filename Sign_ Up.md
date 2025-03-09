@@ -1,4 +1,5 @@
 1. Duplicate Registration / Overwrite Existing User (Email Case Sensitivity) 📡📡📡
+   
     • Vulnerability Type: User Enumeration / Account Takeover 
     • Steps to Reproduce: 
         1. Sign up with user@first.org and password Password123. 
@@ -10,7 +11,8 @@
     • CVSS Base Score: 7.5 (High) 
     • HackerOne Report: HackerOne Report Example 
 
-2. Denial of Service (DoS) via Long Input Strings 📡📡📡
+3. Denial of Service (DoS) via Long Input Strings 📡📡📡
+   
     • Vulnerability Type: DoS 
     • Steps to Reproduce: 
         1. Navigate to the signup form. 
@@ -23,7 +25,8 @@
     • CVSS Base Score: 9.0 (Critical) 
     • HackerOne Report: HackerOne Report Example 
 
-3. Cross-Site Scripting (XSS) in Signup Fields 📡📡📡
+5. Cross-Site Scripting (XSS) in Signup Fields 📡📡📡
+   
     • Vulnerability Type: XSS 
     • Steps to Reproduce: 
         1. Inject <svg/onload=alert('XSS')> into the username field. 
@@ -35,7 +38,8 @@
     • CVSS Base Score: 8.0 (High) 
     • HackerOne Report: HackerOne Report Example 
 
-4. No Rate Limiting on Signup Page 📡📡📡
+7. No Rate Limiting on Signup Page 📡📡📡
+   
     • Vulnerability Type: Rate Limiting / Brute Force 
     • Steps to Reproduce: 
         1. Use Burp Suite Intruder to send multiple signup requests to the form with different email addresses. 
@@ -46,7 +50,8 @@
     • CVSS Base Score: 7.5 (High) 
     • HackerOne Report: HackerOne Report Example 
 
-5. Insufficient Email Verification (Email Bypass) 📡📡📡
+9. Insufficient Email Verification (Email Bypass) 📡📡📡
+
     • Vulnerability Type: Email Verification Bypass 
     • Steps to Reproduce: 
         1. Sign up with attacker@mail.com. 
@@ -60,7 +65,8 @@
     • CVSS Base Score: 9.0 (Critical) 
     • HackerOne Report: HackerOne Report Example 
 
-6. Path Overwrite (Hijacking Profile URL) 📡📡📡
+11. Path Overwrite (Hijacking Profile URL) 📡📡📡
+    
     • Vulnerability Type: Path Traversal 
     • Steps to Reproduce: 
         1. Sign up with the username index.php. 
@@ -71,7 +77,8 @@
     • CVSS Base Score: 8.5 (High) 
     • HackerOne Report: HackerOne Report Example 
 
-7. SQL Injection in Signup Form 📡📡📡
+13. SQL Injection in Signup Form 📡📡📡
+    
     • Vulnerability Type: SQL Injection 
     • Steps to Reproduce: 
         1. Inject SQL payload ' OR 1=1 -- into the email or username field. 
@@ -82,7 +89,8 @@
     • CVSS Base Score: 9.0 (Critical) 
     • HackerOne Report: HackerOne Report Example 
 
-8. Weak CAPTCHA on Signup Page 📡📡📡
+15. Weak CAPTCHA on Signup Page 📡📡📡
+    
     • Vulnerability Type: CAPTCHA Bypass 
     • Steps to Reproduce: 
         1. Use a bot or automated tool to bypass the CAPTCHA on the signup page. 
@@ -93,7 +101,8 @@
     • CVSS Base Score: 5.3 (Medium) 
     • HackerOne Report: HackerOne Report Example 
 
-9. Weak Password Validation 📡📡📡
+17. Weak Password Validation 📡📡📡
+    
     • Vulnerability Type: Weak Password Policy 
     • Steps to Reproduce: 
         1. Sign up using a weak password like 12345 or password. 
@@ -104,7 +113,8 @@
     • CVSS Base Score: 5.0 (Medium) 
     • HackerOne Report: HackerOne Report Example 
 
-10. Information Disclosure in Error Messages 📡📡📡
+19. Information Disclosure in Error Messages 📡📡📡
+    
     • Vulnerability Type: Information Disclosure 
     • Steps to Reproduce: 
         1. Attempt to sign up with an already registered email address. 
@@ -115,7 +125,8 @@
     • CVSS Base Score: 5.3 (Medium) 
     • HackerOne Report: HackerOne Report Example 
 
-11. Insecure Direct Object References (IDOR) on Signup Form 📡📡📡
+21. Insecure Direct Object References (IDOR) on Signup Form 📡📡📡
+    
     • Vulnerability Type: IDOR 
     • Steps to Reproduce: 
         1. Sign up and access first.org/profile/{user-id}. 
@@ -126,7 +137,8 @@
     • CVSS Base Score: 7.5 (High) 
     • HackerOne Report: HackerOne Report Example 
 
-12. Unencrypted Password Transmission Over HTTP 📡📡📡
+23. Unencrypted Password Transmission Over HTTP 📡📡📡
+    
     • Vulnerability Type: Insecure Communication 
     • Steps to Reproduce: 
         1. Navigate to the signup page over HTTP instead of HTTPS. 
@@ -137,7 +149,8 @@
     • CVSS Base Score: 9.3 (Critical) 
     • HackerOne Report: HackerOne Report Example 
 
-13. Account Enumeration via Signup 📡📡📡
+25. Account Enumeration via Signup 📡📡📡
+    
     • Vulnerability Type: Account Enumeration 
     • Steps to Reproduce: 
         1. Attempt to sign up with various known email addresses. 
@@ -148,7 +161,8 @@
     • CVSS Base Score: 5.3 (Medium) 
     • HackerOne Report: HackerOne Report Example 
 
-14. Weak Session Management After Signup 📡📡📡
+27. Weak Session Management After Signup 📡📡📡
+    
     • Vulnerability Type: Session Management Flaw 
     • Steps to Reproduce: 
         1. Sign up and then log out. 
@@ -159,7 +173,8 @@
     • CVSS Base Score: 5.0 (Medium) 
     • HackerOne Report: HackerOne Report Example 
 
-15. Improper Input Validation (Script Injection in Email Field) 📡📡📡
+29. Improper Input Validation (Script Injection in Email Field) 📡📡📡
+    
     • Vulnerability Type: Input Validation Flaw 
     • Steps to Reproduce: 
         1. Inject a script like "><script>alert('XSS')</script> into the email field. 
